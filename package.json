@@ -1,5 +1,5 @@
 {
-  "name": "isomorphic-style-loader",
+  "name": "pb-isomorphic-style-loader",
   "version": "4.0.0",
   "description": "CSS style loader for Webpack optimized for critical path CSS rendering and isomoprhic web apps",
   "repository": "kriasoft/isomorphic-style-loader",

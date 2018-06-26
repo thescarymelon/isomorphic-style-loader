@@ -45,7 +45,15 @@ function insertCss(styles, { replace = false, prepend = false } = {}) {
   const ids = [];
   for (let i = 0; i < styles.length; i++) {
     const [moduleId, css, media, sourceMap] = styles[i];
-    const id = `${moduleId}-${i}`;
+    let id;
+    let notUnique = true;
+
+    do {
+      id = `${moduleId}-${i}-${Math.round(Math.random()*1000000000)}`;
+      if (!ids.includes(id)) {
+          notUnique = !notUnique;
+      }
+    } while (notUnique);
 
     ids.push(id);
 
